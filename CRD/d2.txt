@@ -1,0 +1,189 @@
+
+$Chl.B
+$Chl.B[[1]]
+$Chl.B[[1]][[1]]
+Analysis of Variance Table
+
+Response: data2
+          Df    Sum Sq   Mean Sq F value   Pr(>F)   
+trt        4 0.0290667 0.0072667  9.1597 0.002233 **
+Residuals 10 0.0079333 0.0007933                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$Chl.B[[1]][[2]]
+[1] "The treatment means of one or more treatments are not same, so go for multiple comparison test"
+
+$Chl.B[[1]][[3]]
+[1] "R Square 0.786"
+
+$Chl.B[[1]][[4]]
+
+	Shapiro-Wilk normality test
+
+data:  model$residuals
+W = 0.74277, p-value = 0.000741
+
+
+$Chl.B[[1]][[5]]
+[1] "Normality assumption is violated"
+
+$Chl.B[[1]][[6]]
+[1] "SEm 0.0163 , SEd 0.023"
+
+$Chl.B[[1]][[7]]
+$Chl.B[[1]][[7]][[1]]
+       MSerror Df Mean       CV  t.value        LSD
+  0.0007933333 10 0.28 10.05935 2.228139 0.05124181
+
+$Chl.B[[1]][[7]][[2]]
+       data2 groups
+T2 0.3233333      a
+T5 0.3233333      a
+T4 0.2766667      a
+T3 0.2733333      a
+T1 0.2033333      b
+
+
+
+
+$Total.Chl
+$Total.Chl[[1]]
+$Total.Chl[[1]][[1]]
+Analysis of Variance Table
+
+Response: data2
+          Df   Sum Sq  Mean Sq F value   Pr(>F)   
+trt        4 0.169040 0.042260   6.758 0.006677 **
+Residuals 10 0.062533 0.006253                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$Total.Chl[[1]][[2]]
+[1] "The treatment means of one or more treatments are not same, so go for multiple comparison test"
+
+$Total.Chl[[1]][[3]]
+[1] "R Square 0.73"
+
+$Total.Chl[[1]][[4]]
+
+	Shapiro-Wilk normality test
+
+data:  model$residuals
+W = 0.89943, p-value = 0.09329
+
+
+$Total.Chl[[1]][[5]]
+[1] "Normality assumption is not violated"
+
+$Total.Chl[[1]][[6]]
+[1] "SEm 0.0457 , SEd 0.0646"
+
+$Total.Chl[[1]][[7]]
+$Total.Chl[[1]][[7]][[1]]
+      MSerror Df      Mean       CV  t.value       LSD
+  0.006253333 10 0.8386667 9.429017 2.228139 0.1438641
+
+$Total.Chl[[1]][[7]][[2]]
+       data2 groups
+T5 0.9266667      a
+T2 0.9233333      a
+T4 0.8633333      a
+T3 0.8433333      a
+T1 0.6366667      b
+
+
+
+
+$TP
+$TP[[1]]
+$TP[[1]][[1]]
+Analysis of Variance Table
+
+Response: data2
+          Df  Sum Sq Mean Sq F value    Pr(>F)    
+trt        4 30.4193  7.6048  271.19 3.786e-10 ***
+Residuals 10  0.2804  0.0280                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$TP[[1]][[2]]
+[1] "The treatment means of one or more treatments are not same, so go for multiple comparison test"
+
+$TP[[1]][[3]]
+[1] "R Square 0.991"
+
+$TP[[1]][[4]]
+
+	Shapiro-Wilk normality test
+
+data:  model$residuals
+W = 0.90687, p-value = 0.1212
+
+
+$TP[[1]][[5]]
+[1] "Normality assumption is not violated"
+
+$TP[[1]][[6]]
+[1] "SEm 0.0967 , SEd 0.1367"
+
+$TP[[1]][[7]]
+$TP[[1]][[7]][[1]]
+     MSerror Df     Mean       CV  t.value       LSD
+  0.02804232 10 4.994382 3.352936 2.228139 0.3046517
+
+$TP[[1]][[7]][[2]]
+      data2 groups
+T2 6.887289      a
+T3 6.218489      b
+T4 4.526222      c
+T1 4.485689      c
+T5 2.854222      d
+
+
+
+
+$FY
+$FY[[1]]
+$FY[[1]][[1]]
+Analysis of Variance Table
+
+Response: data2
+          Df  Sum Sq Mean Sq F value    Pr(>F)    
+trt        4 1906.94  476.73  829.38 1.467e-12 ***
+Residuals 10    5.75    0.57                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$FY[[1]][[2]]
+[1] "The treatment means of one or more treatments are not same, so go for multiple comparison test"
+
+$FY[[1]][[3]]
+[1] "R Square 0.997"
+
+$FY[[1]][[4]]
+
+	Shapiro-Wilk normality test
+
+data:  model$residuals
+W = 0.96366, p-value = 0.7556
+
+
+$FY[[1]][[5]]
+[1] "Normality assumption is not violated"
+
+$FY[[1]][[6]]
+[1] "SEm 0.4377 , SEd 0.619"
+
+$FY[[1]][[7]]
+$FY[[1]][[7]][[1]]
+    MSerror Df  Mean       CV  t.value      LSD
+  0.5748067 10 38.85 1.951506 2.228139 1.379296
+
+$FY[[1]][[7]][[2]]
+      data2 groups
+T1 55.49000      a
+T3 42.76333      b
+T4 40.37667      c
+T2 34.78667      d
+T5 20.83333      e
