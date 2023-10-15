@@ -2,10 +2,10 @@
 
 ## ANOVA ##
 
+#install and load the library
 library (doebioresearch)
 
 #Read Table #
-
 data<-read.csv(file.choose())
 
 head(data)
