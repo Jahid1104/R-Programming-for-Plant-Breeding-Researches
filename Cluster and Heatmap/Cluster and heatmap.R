@@ -7,17 +7,18 @@ data<-read.csv(file.choose()) #without cluster
 
 head(data)
 str(data)
-data$x<-as.character(x=data$X)
+data$x<-as.character(x=data$Gene.Name)
 str(data)
 head(data)
-rownames(data)<-c(data$X)
+rownames(data)<-c(data$x)
 head(data)
-newdata<-data[,-1]
+newdata<-data [ , -47]
+newdata<-newdata [ , -1]
 head(newdata)
 
 
 matx <- scale(newdata)
-heatmap(matx, scale = "none")
+heatmap(matx, scale = "row")
 
 ###Draw Heatmap with Row & Column Clusters (Euclidean", "ward.D2", method )
 pheatmap(matx, 
@@ -25,5 +26,7 @@ pheatmap(matx,
 pheatmap(matx, 
          clustering_distance_rows = "euclidean",
          clustering_distance_cols = "euclidean", clustering_method = "ward.D2",
-         cutree_rows = 4, cutree_cols =3, 
+         cutree_rows = 3, cutree_cols =3, 
+         legend = T,
+         fontsize = 11,
          color=colorRampPalette(c("navy", "white", "red"))(50))
