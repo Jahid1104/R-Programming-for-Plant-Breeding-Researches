@@ -5,12 +5,12 @@ head(data)
 
 tail(data)
 str(data)
-data$X<-as.character(x=data$X)
+data$X<-as.character(x=data$Accession)
 
 str(data)
 head(data)
 
-rownames(data)<-c(data$X)
+rownames(data)<-c(data$Accession)
 head(data)
 newdata<-data[,-1]
 head(newdata)
@@ -28,10 +28,10 @@ plot(x=res.hc) #plot 1
 
 
 library(factoextra)
-fviz_dend(x=res.hc,cex=0.7,lwd=0.7) #plot 2
+fviz_dend(x=res.hc,cex=0.7,lwd=0.7,rect = T) #plot 2
 
 ###Rectangle fill with no border
-fviz_dend(x=res.hc,cex=0.8,lwd=0.8,k=6, k_colors="jco") #plot 3
+fviz_dend(x=res.hc,cex=1,lwd=0.8,k=5, k_colors="jco", xlab = " ", ylab = " ", main = " ", horiz=TRUE) #plot 3
 
 ###Rectangle fill with border # plot 4
 fviz_dend(x=res.hc,cex=0.8,lwd=0.8,k=6, rect=TRUE, rect_border="jco",  k_colors="jco", rect_fill=TRUE)

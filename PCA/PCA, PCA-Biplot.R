@@ -9,7 +9,7 @@ data$X<-as.character(x=data$X)
 str(data)
 
 head(data)
-rownames(data)<-c(data$X)
+rownames(data)<-c(data$Name)
 
 head(data)
 data1 <-data[,-1]

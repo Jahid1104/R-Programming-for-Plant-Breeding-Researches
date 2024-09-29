@@ -17,7 +17,7 @@ library(viridis)
 
 # Violin basic
 data1 %>%
-ggplot( aes(x=Gen, y=weight, fill=Gen)) +
+ggplot( aes(x=Accession, y=DG, fill=Accession)) +
   geom_violin() +
   scale_fill_viridis(discrete = T, alpha=0.1, option="A") +
   theme_ipsum() +
@@ -25,5 +25,5 @@ ggplot( aes(x=Gen, y=weight, fill=Gen)) +
     legend.position="top",
     plot.title = element_text(size=11)
   ) +
-  ggtitle("Violin chart") +
+  ggtitle("Days to Germination") +
   xlab("")

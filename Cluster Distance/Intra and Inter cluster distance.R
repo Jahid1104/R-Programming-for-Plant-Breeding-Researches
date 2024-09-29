@@ -18,7 +18,7 @@ d
 
 library(NbClust)
 wardse <-hclust(d,"ward.D2")
-hcm <-cutree(wardse, k=4) #k means the number of cluster
+hcm <-cutree(wardse, k=6) #k means the number of cluster
 hcm #sort your data according to the output groups
 
 
@@ -37,18 +37,18 @@ data<-read.csv(file.choose()) #with cluster
 head(data)
 tail(data)
 str(data)
-data$X<-as.character(x=data$X)
+data$X<-as.character(x=data$Cluster)
 str(data)
 head(data)
-rownames(data)<-c(data$X)
+rownames(data)<-c(data$Accession)
 head(data)
 data1 <-data[,-1]
 head(data1)
 
 library("factoextra")
 library("FactoMineR")
-iris.pca <- PCA(data1[,-13], graph = FALSE)
-
+iris.pca <- PCA(data1[,-19], graph = FALSE)
+iris.pca
 #plot 1
 fviz_pca_ind(iris.pca, label = "all", col.ind = data1$Cluster, palette = c("#00AFBB", "green", "red", "#FC4E07"),addEllipses = TRUE, ellipse.type = "convex",legend.title = "Cluster")
 

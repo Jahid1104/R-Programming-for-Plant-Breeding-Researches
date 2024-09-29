@@ -1,30 +1,32 @@
 
 library(variability)
 
-vardata <- read.csv(file.choose())
+a <- read.csv(file.choose())
 
-head(vardata)
-tail(vardata)
+View(a)
+
+head(a)
+tail(a)
 
 ####Analysis of Covariance####
-data(vardata)
-ancova(vardata[3:9],vardata$Gen,vardata$Rep)
+
+ancova(a[3:18],a$Genotype,a$Replication)
 
 ##### Estimation of Genetic Parameters#####
-gen.var(vardata[3:9],vardata$Gen,vardata$Rep)
+gen.var(a[2:20],a$Name)
 
 #####Genotypic Correlation Analysis#####
-geno.corr(vardata[3:9],vardata$Gen,vardata$Rep)
+geno.corr(a[3:17],a$Accession,a$Replication)
 
 #### Phenotypic Correlation Analysis####
-pheno.corr (vardata[3:9],vardata$Gen,vardata$Rep)
+pheno.corr (a[3:17],a$Accession,a$Replication)
 
 ####Estimation of direct and indirect effect####
 
 #### Genotypic Path Analysis####
-geno.path(vardata[9],vardata[3:8],vardata$Gen,vardata$Rep)
+geno.path(a[18],a[3:17],a$Genotype,a$Replication)
 
 #### Phenotypic Path Analysis####
-pheno.path(vardata[9],vardata[3:8],vardata$Gen,vardata$Rep)
+pheno.path(a[18],a[3:17],a$Genotype,a$Replication)
 
-
+?geno.path
