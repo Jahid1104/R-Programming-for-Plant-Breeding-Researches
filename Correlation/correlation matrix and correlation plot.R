@@ -21,7 +21,7 @@ corrplot(mat,method="color", type="lower")
 #or 
 
 corr_mat=cor(mat,method="s")
-corr_mat[1:5,1:5]
+corr_mat[1:10,1:10]
 corrplot(corr_mat)  #plot 3
 
 # Draw corrplot with p-values

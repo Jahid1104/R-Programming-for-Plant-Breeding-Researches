@@ -4,6 +4,13 @@
 pea<-read.csv(file.choose()) #without cluster
 head(pea)
 
+# Determine number of clusters
+wss <- (nrow(pea)-1)*sum(apply(pea,2,var))
+for (i in 2:11) wss[i] <- sum(kmeans(pea,
+                                     centers=i)$withinss)
+plot(1:10, wss, type="b", xlab="Number of Clusters",
+     ylab="Within groups sum of squares")
+
 ####Scaling####
 pea.s <-scale(pea[,-1])
 pea.s
@@ -18,7 +25,7 @@ d
 
 library(NbClust)
 wardse <-hclust(d,"ward.D2")
-hcm <-cutree(wardse, k=6) #k means the number of cluster
+hcm <-cutree(wardse, k=5) #k means the number of cluster
 hcm #sort your data according to the output groups
 
 
