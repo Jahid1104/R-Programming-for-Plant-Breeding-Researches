@@ -5,7 +5,7 @@ head(data)
 tail(data)
 
 str(data)
-data$X<-as.character(x=data$X)
+data$Genotype<-as.character(x=data$Genotype)
 str(data)
 
 head(data)
@@ -36,8 +36,11 @@ eig.val
 #### Graphical view####
 
 ##Scree plot
+tiff(filename="pca.tiff", width=2300, height=2000, res=300)
+
 fviz_eig(res.pca, choice = "eigenvalue", geom.="bar", barfill="green4", addlabels = TRUE)
 
+dev.off()
 ## Percentage of explained variance
 fviz_eig(res.pca, geom.="bar", barfill="green3", addlabels = TRUE, hjust = -0.8, ylim = c(0, 45))
 
@@ -58,18 +61,25 @@ fviz_pca_var(res.pca, arrowsize = 1.5, labelsize = 4, col.var = "contrib",gradie
 
 
 ###Biplot
+tiff(filename="pca biplot.tiff", width=2300, height=2000, res=300)
   
 fviz_pca_biplot(res.pca, repel = TRUE,
-                  col.var = "#2E9FDF", 
-                  col.ind = "#696969" )
+                  col.var = "maroon", 
+                  col.ind = "darkblue" )
+
+
+dev.off()
+
+###Biplot
+tiff(filename="pca biplot.tiff", width=2300, height=2000, res=300)
 
 ###Cos2
 fviz_pca_biplot(res.pca,
                 label = "var",
                 col.ind = "cos2",
-                col.var = "black",
+                col.var = "maroon",
                 gradient.cols = c("blue","green","red"))
-
+dev.off()
 ###Contribution
 fviz_pca_biplot(res.pca,
                 label = "var",

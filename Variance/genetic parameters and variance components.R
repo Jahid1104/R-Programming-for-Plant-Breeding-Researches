@@ -10,23 +10,23 @@ tail(a)
 
 ####Analysis of Covariance####
 
-ancova(a[3:18],a$Genotype,a$Replication)
+ancova(a[3:11],a$Genotype,a$Replication)
 
 ##### Estimation of Genetic Parameters#####
-gen.var(a[2:20],a$Name)
+gen.var(a[3:11],a$Genotype,a$Replication)
 
 #####Genotypic Correlation Analysis#####
-geno.corr(a[3:17],a$Accession,a$Replication)
+geno.corr(a[3:11],a$Genotype,a$Replication)
 
 #### Phenotypic Correlation Analysis####
-pheno.corr (a[3:17],a$Accession,a$Replication)
+pheno.corr (a[3:11],a$Genotype,a$Replication)
 
 ####Estimation of direct and indirect effect####
 
 #### Genotypic Path Analysis####
-geno.path(a[18],a[3:17],a$Genotype,a$Replication)
+geno.path(a[11],a[3:10],a$Genotype,a$Replication)
 
 #### Phenotypic Path Analysis####
-pheno.path(a[18],a[3:17],a$Genotype,a$Replication)
+pheno.path(a[11],a[3:10],a$Genotype,a$Replication)
 
 ?geno.path

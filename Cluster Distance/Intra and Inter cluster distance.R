@@ -3,7 +3,7 @@
 ####Data load
 pea<-read.csv(file.choose()) #without cluster
 head(pea)
-
+pea<- df
 # Determine number of clusters
 wss <- (nrow(pea)-1)*sum(apply(pea,2,var))
 for (i in 2:11) wss[i] <- sum(kmeans(pea,
@@ -12,7 +12,7 @@ plot(1:10, wss, type="b", xlab="Number of Clusters",
      ylab="Within groups sum of squares")
 
 ####Scaling####
-pea.s <-scale(pea[,-1])
+pea.s <-scale(pea)
 pea.s
 
 ####dissimilarity matrix####

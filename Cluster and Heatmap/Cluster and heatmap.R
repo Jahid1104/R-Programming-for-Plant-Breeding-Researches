@@ -10,10 +10,10 @@ str(data)
 data$x<-as.character(x=data$Gene.Name)
 str(data)
 head(data)
-rownames(data)<-c(data$Gene.Name)
+rownames(data)<-c(data$Genotype)
 head(data)
-newdata<-data [ , -47]
 newdata<-data [ , -1]
+newdata<-newdata [ , -1]
 head(newdata)
 View (newdata)
 
@@ -32,9 +32,9 @@ tiff(filename = file_name, width = 6 * dpi, height = 4 * dpi, res = dpi)
 pheatmap(matx, 
          clustering_distance_rows = "euclidean",
          clustering_distance_cols = "euclidean", clustering_method = "ward.D2",
-         cutree_rows = 3, cutree_cols =3, 
+         cutree_rows = 3, cutree_cols =3, labels_row=expression(italic(c("CmTH01", "CmTH02"))),
          legend = T,
-         fontsize = 11,
+         fontsize = 11,  
          color=colorRampPalette(c("navy", "white", "red"))(50))
 pheatmap(matx, 
          color=colorRampPalette(c("navy", "white", "red"))(50))
